@@ -1,0 +1,6 @@
+mixin button(tag, text, link, className, dataAttr)
+	if (tag === 'a')
+		a.button(href=link target='_blank' class=className)= text
+	else
+		button.button(class=className data-type=dataAttr)
+			| #{text}

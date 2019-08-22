@@ -1,0 +1,12 @@
+include ../../components/button/button
+
+mixin download-field()
+	.download-field
+		.download-field__message Для добавления изображения в галерею #[button.download-field__tab.download-field__tab--active вставьте ссылку на изображение] или #[button.download-field__tab загрузите его].
+		.download-field__conatiner
+			.download-field__item.download-field__item--show
+				input(type='url' placeholder='Укажите ссылку до изображения')
+				+button('button', 'Загрузить', '', 'download-field__load', 'url')
+			.download-field__item
+				input(type='file')
+				+button('button', 'Загрузить', '', 'download-field__load', 'file')
