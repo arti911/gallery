@@ -373,6 +373,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 0;
 }
 
 a {
@@ -491,20 +492,30 @@ figure {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -0.3125rem;
 }
 .gallery__item {
-  flex: 1 1 18.75rem;
-  max-height: 40.625rem;
+  position: relative;
+  flex: 1 0 18.75rem;
+  margin: 0.3125rem;
+  padding-bottom: 100%;
 }
 @media (min-width: 768px) {
   .gallery__item {
-    flex: 1 1 28.125rem;
+    flex: 1 0 28.125rem;
+    padding-bottom: 60%;
   }
 }
 @media (min-width: 1280px) {
   .gallery__item {
-    flex: 1 1 12.5rem;
+    flex: 1 0 12.5rem;
+    padding-bottom: 30%;
   }
+}
+.gallery__img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=/main.ff46185c.css.map */
