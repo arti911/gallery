@@ -6,7 +6,7 @@ mixin download-field()
 		.download-field__conatiner
 			template(v-if='fieldByLink')
 				label.download-field__item
-					input(type='url' placeholder='Укажите ссылку до изображения' autofocus v-model='url' key='url')
+					input(type='url' placeholder='Укажите ссылку до изображения' autofocus v-model.trim='url' key='url')
 					+button('Загрузить', 'download-field__load')(:class="{ 'download-field__load--disabled' : !url }" @click='addImageUrl()')
 			template(v-else)
 				label.download-field__item
