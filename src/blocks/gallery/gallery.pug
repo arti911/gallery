@@ -1,2 +1,4 @@
 mixin gallery()
 	.gallery
+		figure.gallery__item(v-for='url in images')
+			img(:src='url')

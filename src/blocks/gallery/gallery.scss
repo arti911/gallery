@@ -5,6 +5,15 @@ $parent: gallery;
   flex-wrap: wrap;
 
 	&__item {
-		flex: 1 1 rem(350);
+		flex: 1 1 rem(300);
+		max-height: rem(650);
+
+		@media (min-width: $device-md) {
+			flex: 1 1 rem(450);
+		}
+
+		@media (min-width: $device-xl) {
+			flex: 1 1 rem(200);
+		}		
 	}
 }

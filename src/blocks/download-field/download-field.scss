@@ -12,16 +12,28 @@ $parent: download-field;
 		font-weight: 700;
 
 		&--active {
+			pointer-events: none;
 			color: $color-blue;
 			text-decoration: underline;
+			cursor: default;
 		}
 	}
 
 	&__item {
-		display: none;
+		display: flex;
 
 		&--show {
 			display: flex;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			padding: 0 rem(30);
+			border: 1px solid $color-blue;
+			border-right: none;
+			cursor: pointer;
 		}
 
 		input {
@@ -29,6 +41,18 @@ $parent: download-field;
 			padding: 0 rem(30);
 			border: 1px solid $color-blue;
 			border-right: none;
+
+			&[type=file] {
+				display: none;
+			}
+		}
+	}
+
+	&__load {
+		&--disabled {
+			pointer-events: none;
+			background-color: $color-gray;
+			border-left-color: $color-gray;
 		}
 	}
 }
