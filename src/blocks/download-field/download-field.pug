@@ -1,0 +1,15 @@
+include ../../components/button/button
+
+mixin download-field()
+	.download-field
+		.download-field__message Для добавления изображений в галерею #[button.download-field__tab(@click='fieldByLink = true' :class="{ 'download-field__tab--active' : fieldByLink }") вставьте ссылку на изображение] или #[button.download-field__tab(@click='fieldByLink = false' :class="{ 'download-field__tab--active' : !fieldByLink }") загрузите его].
+		.download-field__conatiner
+			template(v-if='fieldByLink')
+				label.download-field__item
+					input(type='url' placeholder='Укажите ссылку до изображения' autofocus v-model.trim='url' key='url')
+					+button('Загрузить', 'download-field__load')(:class="{ 'download-field__load--disabled' : !url }" @click='addImageUrl()')
+			template(v-else)
+				label.download-field__item
+					input(type='file' accept='image/bmp, image/gif, image/jpeg, image/png, application/json' key='file' @change='getFile($event)')
+					span {{filePlaceholder}}
+					+button('Загрузить', 'download-field__load')(:class="{ 'download-field__load--disabled' : !file }" @click='addImageFile()')

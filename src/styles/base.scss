@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 12px;
+
+	@media (min-width: $device-xl) {
+		font-size: 16px;
+	}
+}
+
+body {
+	position: relative;
+	width: 100%;
+	font-family: $font-open-sans;
+	overflow-y: scroll;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: 50% 50%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+p {
+	margin: 0;
+}
+
+button {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+	outline: transparent;
+	cursor: pointer;
+}
+
+input {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+	outline: transparent;
+}
+
+figure {
+	margin: 0;
+}

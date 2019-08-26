@@ -1,0 +1,28 @@
+{
+  "name": "template_papikyan_artur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/pages/index.pug --open",
+    "build": "parcel build src/pages/index.pug"
+  },
+  "author": "Papikyan Artur",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "pug": "^2.0.4",
+    "sass": "^1.22.10",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-config-recommended": "^2.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "normalize.css": "^8.0.1"
+  }
+}
