@@ -372,8 +372,8 @@ img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 0;
+  object-fit: contain;
+  object-position: 50% 50%;
 }
 
 a {
@@ -499,6 +499,7 @@ figure {
   flex: 1 0 18.75rem;
   margin: 0.3125rem;
   padding-bottom: 100%;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .gallery__item {
@@ -511,6 +512,17 @@ figure {
     flex: 1 0 12.5rem;
     padding-bottom: 30%;
   }
+}
+.gallery__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(15px);
 }
 .gallery__img {
   position: absolute;
