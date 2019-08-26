@@ -27,7 +27,11 @@ new Vue({
     addImageUrl() {
       if (this.url.includes('.json')) {
         axios
-          .get(this.url)
+          .get(this.url, {
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+            },
+          })
           .then(response => this.addImagesFromJson(response.data))
           .catch(error => console.log(error));
         this.url = '';

@@ -12,9 +12,13 @@ $parent: gallery;
     padding-bottom: 100%;
     overflow: hidden;
 
+    @media (min-width: $device-sm) {
+      padding-bottom: 45%;
+    }
+
     @media (min-width: $device-md) {
       flex: 1 0 rem(450);
-      padding-bottom: 60%;
+      padding-bottom: 50%;
     }
 
     @media (min-width: $device-xl) {
