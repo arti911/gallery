@@ -501,10 +501,15 @@ figure {
   padding-bottom: 100%;
   overflow: hidden;
 }
+@media (min-width: 480px) {
+  .gallery__item {
+    padding-bottom: 45%;
+  }
+}
 @media (min-width: 768px) {
   .gallery__item {
     flex: 1 0 28.125rem;
-    padding-bottom: 60%;
+    padding-bottom: 50%;
   }
 }
 @media (min-width: 1280px) {

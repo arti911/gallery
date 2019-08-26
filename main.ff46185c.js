@@ -1944,7 +1944,11 @@ new Vue({
       var _this = this;
 
       if (this.url.includes('.json')) {
-        _axios.default.get(this.url).then(function (response) {
+        _axios.default.get(this.url, {
+          headers: {
+            'Access-Control-Allow-Origin': '*'
+          }
+        }).then(function (response) {
           return _this.addImagesFromJson(response.data);
         }).catch(function (error) {
           return console.log(error);
@@ -2026,7 +2030,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64051" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64775" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
