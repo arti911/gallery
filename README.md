@@ -5,5 +5,7 @@ Ecwid test frontend - [Галерея изображений](https://arti911.gi
 Для сборки используется Parcel.
 
 Устанавливаем parcel `npm install -g parcel-bundler`.
+
 Устанавливаем зависимости `npm install`.
+
 Запускаем `npm run start`.
