@@ -1,6 +1,6 @@
 # gallery
 
-Ecwid test frontend - [Галерея изображений](https://arti911.github.io/gallery/)
+[Галерея изображений](https://arti911.github.io/gallery/)
 
 Для сборки используется Parcel.
 
